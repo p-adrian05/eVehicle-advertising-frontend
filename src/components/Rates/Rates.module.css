@@ -1,0 +1,42 @@
+.Rates{
+    text-decoration: none;
+    margin:1rem;
+    padding: 1rem;
+    box-shadow: 0px 2px 3px #cccccc;
+    width: 770px;
+    text-align: center;
+}
+.Title{
+    color:darkgreen;
+}
+.NavButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.navButton{
+    background-color:#ccc;
+    width: 100%;
+    text-align: center;
+    margin:1rem;
+    padding:1rem;
+    margin-top:0;
+}.navButton:hover{
+     cursor: pointer;
+ }
+ .active{
+
+ }
+ .RatesCount{
+     margin-bottom: 1rem;
+ }
+.PageNumbers{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .Rates{
+        width: 350px;
+    }
+}

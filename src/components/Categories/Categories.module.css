@@ -1,0 +1,22 @@
+.Categories{
+    margin: 0;
+    padding: 0;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #5C9210;;
+    position:relative;
+    top:-1rem;
+}
+
+@media (max-width: 600px) {
+    .Categories{
+        flex-flow:wrap;
+        justify-content: center;
+
+    }
+}

@@ -1,0 +1,55 @@
+.Input{
+    margin:.3rem 1rem;
+    padding:.5rem;
+    width: 10rem;
+}
+select:hover{
+    cursor: pointer;
+}
+.Title{
+    margin-bottom: .5rem;
+}
+.Label{
+    font-weight: bold;
+    color:red;
+    font-size: 12px;
+    display: block;
+    margin: 0.4rem;
+}
+
+.InputElement{
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font:inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.InputElement:focus{
+    outline: none;
+    background-color: #ccc;
+}
+.Invalid{
+    border:1px solid red;
+    background-color: #FDA49A;
+}
+.TextEditor{
+    min-height:  15rem;
+}
+@media (max-width: 600px) {
+    .Input{
+        margin:.3rem .5rem;
+        padding:.2rem;
+       width: 40%;
+    }
+    .TextEditor{
+        min-height: 25rem;
+        width: 20rem;
+    }
+    textarea{
+       width: 22rem !important;
+    }
+
+}

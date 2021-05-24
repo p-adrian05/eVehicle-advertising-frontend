@@ -1,0 +1,16 @@
+
+.Numbers a{
+  padding-right: .5rem;
+  text-decoration: none;
+}
+.Numbers {
+  padding-top:1.6rem;
+  text-decoration: none;
+}
+.active{
+  font-weight: bolder;
+}
+.PageNumbers{
+  display: flex;
+  flex-direction: row;
+}

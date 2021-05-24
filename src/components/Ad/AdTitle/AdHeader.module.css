@@ -1,0 +1,74 @@
+.AdHeader{
+    padding:1rem;
+    width: 800px;
+}
+.Title{
+    font-weight: bolder;
+    color:darkgreen;
+    font-size: larger;
+}
+.BottomInfo{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 3px #cccccc;
+    padding:1rem;
+}
+.CreatorInfo div{
+    display: flex;
+    flex-direction: column;
+    padding:.5rem;
+    justify-content: space-evenly;
+}
+
+.adInfo{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+.price{
+    padding-bottom: 1rem;
+    font-size: x-large;
+    font-weight: bolder;
+    color: darkgreen;
+}
+.userName{
+    font-weight: bolder;
+    color:black;
+}
+.userName:hover{
+
+    color:darkgreen;
+}
+a{
+    text-decoration: none;
+}
+.TopInfo{
+    box-shadow: 0px 2px 3px #cccccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.TopInfo div{
+  padding-top: 1rem;
+    margin-top:.5rem;
+    font-weight: bolder;
+    color: green;
+}
+@media (max-width: 600px) {
+    .TopInfo{
+        flex-direction: column;
+        flex-flow: column wrap;
+        justify-content: left;
+        width: 375px;
+    }
+    .TopInfo div{
+        text-align: center;
+    }
+    .Title{
+       width: 375px;
+    }
+    .BottomInfo{
+        width: 350px;
+    }
+}

@@ -1,0 +1,24 @@
+.Login{
+ display: table;
+    margin: 0 auto;
+}
+.Login h1{
+    color:darkgreen;
+}
+.Inputs{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left:-3rem
+}
+.Inputs input{
+  width: auto;
+}
+.ErrMessage{
+    width: 18rem;
+    color:red
+}
+.Button{
+    display: flex;
+    justify-content: center;
+}

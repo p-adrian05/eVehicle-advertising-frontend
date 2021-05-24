@@ -1,0 +1,42 @@
+.RateCreator{
+
+}
+.RadioButtons{
+    display: flex;
+    justify-content: center;
+    margin:2rem;
+    padding:1rem;
+    box-shadow: 0px 2px 3px #cccccc;
+
+}
+.Neg{
+    color:red;
+    font-weight: bolder;
+    font-size: larger;
+}
+.Pos{
+    color:green;
+    font-weight: bolder;
+    font-size: larger;
+    margin-right: 5rem;
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: larger;
+}
+.Username{
+    margin:0 1rem;
+    color:black;
+    font-weight: bolder;
+}
+@media (min-width: 600px) {
+    .RadioButtons {
+        margin:.5rem;
+        padding:.5rem;
+    }
+    .Pos{
+        margin-right: 1rem;
+    }
+}

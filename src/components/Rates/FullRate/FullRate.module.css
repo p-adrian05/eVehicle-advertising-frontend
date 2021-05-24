@@ -1,0 +1,48 @@
+.FullRate{
+
+    margin:.5rem;
+}
+.Header{
+    box-shadow: 0px 2px 3px #cccccc;
+   padding: 1rem;
+
+}
+
+.Header label{
+   font-size: larger;
+}
+.adTitle{
+    margin-top: 1rem;
+    font-size: larger;
+}
+.Rate label{
+    font-size: larger;
+
+}
+.Rate{
+    margin:.5rem 0;
+    box-shadow: 0px 2px 3px #cccccc;
+    padding: 1rem;
+}
+.RatingUsername{
+    font-size: larger;
+
+}
+.Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.POSITIVE{
+    color:darkgreen;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.NEGATIVE{
+    padding-top: 1rem;
+    font-weight: bolder;
+    color:red;
+}
+@media (max-width: 600px) {
+
+}

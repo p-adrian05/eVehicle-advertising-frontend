@@ -1,0 +1,73 @@
+.Message{
+    width: 770px;
+    box-shadow: 0px 2px 3px #cccccc;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+.Header{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:.5rem;
+    padding-left: 1.5rem;
+}
+.Unread{
+
+   background-color: lightgreen;
+}
+.SideInfo{
+    text-align: center;
+    padding: 1rem;
+}
+.SideInfo img{
+    width: 70px;
+    height: 70px;
+}
+.Body{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: start;
+}
+.MessageInfo{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.HeaderSideInfo{
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+.Usernames{
+    display: flex;
+    justify-content: space-between;
+    width:6rem;
+}
+.State{
+    margin:.5rem  0rem;
+}
+ .Username{
+    color:darkgreen;
+    font-weight: bolder;
+}
+.Username:hover{
+    color:lightgreen;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .Message{
+        width: 370px;
+    }
+    .AnswerTextArea textarea{
+        width:200px;
+        height: 300px;
+    }
+    .HeaderSideInfo{
+     flex-direction: column;
+        width: 10rem;
+    }
+}

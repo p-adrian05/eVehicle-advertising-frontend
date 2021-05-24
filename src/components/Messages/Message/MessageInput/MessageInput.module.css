@@ -1,0 +1,21 @@
+.SendMessageButtons{
+    display: flex;
+    justify-content: center;
+}
+.MessageInput textarea{
+    height: 200px;
+    width: 600px;
+}
+.MessageInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -.5rem;
+}
+@media (max-width: 400px) {
+
+    .MessageInput textarea{
+        width: 230px;
+        height: 400px;
+    }
+}

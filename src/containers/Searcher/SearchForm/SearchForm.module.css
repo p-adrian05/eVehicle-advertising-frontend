@@ -1,0 +1,43 @@
+.SearchForm{
+    margin:auto;
+    text-align: center;
+    box-shadow: 0px 2px 3px #ccc;
+    border:1px solid #eee;
+    padding: .5rem;
+    display: block;
+    width: 850px;
+    height: 450px;
+    box-sizing: border-box;
+    position: relative;
+    top:-.5rem;
+}
+
+.SearchForm .Inputs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    padding:.5rem;
+    margin:.5rem;
+}
+/*form::before, form::after {*/
+/*    content: '';*/
+/*    width: 100%;*/
+/*    order: 1;*/
+/*}*/
+
+/*form div div:nth-child(n + 8) {*/
+/*    order: 1;*/
+/*}*/
+/*form div div:nth-child(n + 8) {*/
+/*    order: 2;*/
+/*}*/
+
+
+@media (max-width: 600px) {
+    .SearchForm{
+        width: 375px;
+        height: 700px;
+    }
+
+
+}

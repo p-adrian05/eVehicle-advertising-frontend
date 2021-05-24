@@ -1,0 +1,43 @@
+.RateLabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1100px;
+    box-shadow: 0px 2px 3px #ccc;
+    padding:1rem;
+}
+.AdLink{
+    width:28rem;
+}
+.ProfImage{
+    width: 4rem;
+}
+.Status{
+    display: flex;
+    flex-direction: column;
+}
+.RateLabel td{
+    padding-top:1rem;
+}
+.RateLabel:hover{
+
+    background: #DCEDC8;
+}
+.RateLabel a:hover{
+    cursor: pointer;
+    color: #689F38;
+}
+@media (max-width: 600px) {
+    .RateLabel{
+        flex-direction: column;
+        width: 400px;
+        padding:.5rem;
+        padding-left: 5rem;
+    }
+    .AdLink{
+        width:15rem;
+    }
+    .ProfImage{
+        width: 3rem;
+    }
+}

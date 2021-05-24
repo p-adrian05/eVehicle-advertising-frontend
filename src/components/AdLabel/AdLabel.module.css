@@ -1,0 +1,98 @@
+.Ad{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    padding:1rem;
+    box-shadow: 0px 2px 3px #ccc;
+    position: relative;
+    margin-bottom: 1rem;
+
+}
+.Ad a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.Ad .title:hover{
+    color:lightgreen;
+}
+.Ad div {
+   width: 100%;
+}
+.Frozen,.Frozen .title,.Frozen .price{
+    color:grey;
+    background-color: lightgrey;
+}
+.title{
+    font-size:20px;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.price{
+    font-size:20px;
+    color: darkgreen;
+    font-weight: bold;
+}
+.Ad:hover{
+    box-shadow: 0px 2px 3px darkgreen;
+}
+.Ad .MainImage{
+    width: 20%;
+    height: 20%;
+    margin-right: 1rem;
+}
+.middleInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Froze{
+    z-index: 100;
+    position: absolute;
+    width: 10%;
+    right: 10rem;
+    top:1rem
+}
+.Archived{
+    background-color: #cccccc;
+}
+.Ad .mainInfo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.Ad .sideInfo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.Ad .sideInfo span img,.Ad .sideInfo span i{
+    height: 20px;
+    margin-right: .5rem;
+}
+
+@media (max-width: 600px) {
+    .Ad{
+        width: 355px;
+        padding:.5rem;
+    }
+    .Ad .mainInfo{
+         flex-direction: column;
+     }
+    .Ad .MainImage{
+        width: 30%;
+        height: 30%;
+        margin-right: 1rem;
+    }
+    .Froze{
+        z-index: 100;
+        position: absolute;
+        width: 15%;
+        right: 15rem;
+        top:3rem
+    }
+}

@@ -1,0 +1,68 @@
+.AdCreator{
+    display: table;
+    margin: 1rem auto;
+    width: 900px;
+}
+.Inputs{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    box-shadow: 0px 2px 3px #cccccc;
+    padding:2rem
+}
+.InputGroup input{
+    width: 120%;
+}
+.GroupInputs{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    box-shadow: 0px 2px 3px #cccccc;
+}
+.InputGroup{
+    margin: 1rem;
+}
+.InputGroup:last-child > .GroupInputs{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.InputGroup:last-child > .GroupInputs input{
+    width: 470%;
+}
+.InputGroup:last-child > .GroupInputs textarea{
+    width: 470%;
+    height: 400px;
+}
+.InputForm{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 400px) {
+    .AdCreator{
+        width: 375px;
+    }
+    .GroupInputs{
+        flex-direction: column;
+    }
+    .GroupInputs input{
+       width: 300px;
+    }
+    .GroupInputs select{
+        width: 300px;
+    }
+    .InputGroup:last-child > .GroupInputs input{
+        width: 300px;
+
+    }
+    .InputGroup:last-child > .GroupInputs textarea{
+        width: 300px;
+        height: 300px;
+    }
+    .Inputs{
+        padding:.5rem
+    }
+}

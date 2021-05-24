@@ -1,0 +1,27 @@
+.Messages{
+    display: flex;
+    margin:1rem auto;
+    width: 800px;
+    box-shadow: 0px 2px 3px #cccccc;
+    flex-direction: column;
+    justify-content: center;
+    padding:0;
+}
+
+.NavBar{
+    display: flex;
+    justify-content: center;
+}
+.MessagesBlock{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (max-width: 600px) {
+    .Messages{
+        width: 400px;
+
+    }
+
+}

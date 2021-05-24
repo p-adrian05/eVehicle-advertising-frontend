@@ -1,0 +1,46 @@
+.SearchInput{
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+.SearchInput div{
+    display: flex;
+    flex-direction: row;
+
+}
+.SearchInput div div{
+    display: flex;
+    flex-direction: column;
+    padding:0;
+    margin-left: 1rem;
+
+}
+
+.SearchInput input{
+   width:100%;
+}
+.SearchInput .spanBetween{
+    margin-top: .7rem;
+}
+
+.SearchInput .title{
+
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .SearchInput{
+        width: 100%;
+    }
+    .SearchInput input{
+        width:10rem;
+    }
+    .SearchInput div{
+        display: flex;
+        flex-direction: row;
+    }.SearchInput .spanBetween{
+         display: none;
+     }
+
+}

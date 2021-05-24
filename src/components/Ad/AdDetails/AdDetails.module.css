@@ -1,0 +1,59 @@
+.Table{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    box-shadow: 0px 2px 3px #cccccc;
+}
+.Table .block{
+    margin:1rem;
+}
+.blockData{
+    margin-left: 3rem;
+}
+.blockData tr{
+    text-align: left;
+
+}
+.blockData th{
+    padding-right:2rem;
+    font-weight: inherit;
+}
+.blockData td{
+    text-align: left;
+    padding:.5rem
+}
+.AdDetails{
+    width: 800px;
+    padding:1rem;
+}
+.Desc{
+    padding:1rem;
+}
+.Desc span{
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .Table{
+        justify-content: left;
+
+    }
+    .AdDetails{
+        width:375px;
+
+    }
+    .blockData{
+        margin-left: 1rem;
+    }
+    .Table .block{
+        margin:.5rem;
+    }
+    .blockData th{
+        padding-right:.5rem;
+        font-weight: inherit;
+    }
+    .blockData td{
+        text-align: left;
+        padding:.5rem
+    }
+}

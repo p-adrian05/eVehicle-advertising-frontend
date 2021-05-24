@@ -1,0 +1,64 @@
+.UserData{
+    margin:1rem;
+    width: 800px;
+    text-align: center;
+    box-shadow: 0px 2px 3px #cccccc;
+}
+.Disabled{
+    color:grey;
+}
+.Table{
+    display: flex;
+    justify-content: center;
+}
+.Table tr{
+    text-align: left;
+
+}
+.Table th{
+    padding-right:2rem;
+    font-weight: bolder;
+    color:darkgreen;
+}
+.Table td{
+    text-align: center;
+    padding:.5rem
+}
+.profImage{
+    width: 20%;
+    height: 20%;
+}
+.header{
+ text-align: center;
+    margin-bottom: 2rem;
+}
+@media (max-width: 600px) {
+    .Table{
+        justify-content: left;
+
+    }
+    .header{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .profImage{
+        width: 30%;
+        height: 30%;
+    }
+    .UserData{
+        width:375px;
+    }
+    .Table{
+        margin-left: 1rem;
+    }
+    .Table .block{
+        margin:.5rem;
+    }
+    .Table th{
+        padding-right:.5rem;
+    }
+    .Table td{
+        text-align: left;
+        padding:.5rem
+    }
+}

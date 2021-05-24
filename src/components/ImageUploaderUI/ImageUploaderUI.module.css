@@ -1,0 +1,86 @@
+
+.ImageUploader{
+    margin: 1rem auto;
+    width: 870px;
+    padding:1rem;
+    box-shadow: 0px 2px 3px #cccccc;
+}
+.UploadButton,.Images{
+    padding:1rem;
+    text-align: center;
+    background-color: #eeeeee;
+    color:darkgreen;
+    border:1px dashed black;
+    border-bottom: none;
+}
+.UploadButton{
+    padding-top: 2rem ;
+    padding-bottom: 2rem ;
+}
+.UploadButton:hover{
+    cursor: pointer;
+}
+.Images{
+    padding-top: 0rem ;
+    margin-top:0;
+    border-top: none;
+    border-bottom:1px dashed black;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.Image:first-child{
+   border: 1px solid red;
+}
+.Image img{
+    width: 8rem;
+}
+.Image {
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+   border:1px solid grey;
+}
+.RemoveButton{
+    color:darkred;
+}
+.RemoveButton:hover{
+    color:red;
+}
+.ImageButtons a{
+    padding:.5rem;
+
+}
+.ImageButtons a:hover{
+   cursor: pointer;
+
+}
+.ImageInfo{
+    display: flex;
+    flex-direction: column;
+    padding:1rem
+}
+.ErrorMessages{
+    color:darkred;
+}
+.CoverImageLabel{
+    color:red
+}
+
+
+@media (max-width: 400px) {
+    .ImageUploader{
+        width: 375px;
+        margin:.5rem;
+        padding:1rem;
+    }
+    .Image img{
+        width: 6rem;
+    }
+    .Images{
+        padding:.5rem;
+        padding-top: 0rem ;
+    }
+}
+

@@ -1,0 +1,23 @@
+.NavigationItems{
+     margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+.Login a{
+    color:red;
+}
+@media (min-width: 500px) {
+    .NavigationItems{
+        flex-flow: row;
+    }
+    .Login a{
+        color:white;
+        position: relative;
+        top:-3px;
+        margin-right: 10px;
+    }
+}

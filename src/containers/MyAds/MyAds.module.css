@@ -1,0 +1,44 @@
+.MyAds{
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+}
+.orderSelector{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+    padding:0;
+    box-shadow: 0px 2px 3px #ccc;
+}
+.orderSelector span{
+    padding:1rem;
+    margin-top: .2rem;
+}
+.NavBar{
+    display: flex;
+    justify-content: center;
+}
+.AdLabels{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Ads{
+
+    margin-left:2rem;
+}
+@media (max-width: 600px) {
+    .orderSelector{
+        padding:.5rem;
+        margin-top: .2rem;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .NavBar{
+        width: 500px;
+        display: flex;
+        justify-content: center;
+    }
+}

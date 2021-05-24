@@ -1,0 +1,14 @@
+.UserRate{
+    display: flex;
+    flex-direction: column;
+}
+.Positive{
+    color:darkgreen;
+    font-weight: bolder;
+    font-size: smaller;
+}
+.Negative{
+    color:red;
+    font-weight: bolder;
+    font-size: smaller;
+}
