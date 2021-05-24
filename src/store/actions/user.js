@@ -21,10 +21,10 @@ export const createRateSuccess = ()=>{
     };
 };
 
-export const createRate = (payload,rateStatus)=>{
+export const createRate = (payload,rateStatus,token)=>{
     return dispatch => {
         dispatch(createRateStart());
-        ad_axios.post(`rate/${rateStatus}`,payload)
+        ad_axios.post(`rate/${rateStatus}`,payload,{headers:auth_header(token)})
             .then(res=>{
                 dispatch(createRateSuccess());
             })

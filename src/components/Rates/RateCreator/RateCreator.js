@@ -27,13 +27,13 @@ class RateCreator extends Component{
             description: text,
             rateState: this.state.selectedOption,
             ratedUsername: this.props.username,
-            ratingUsername: "user1"
+            ratingUsername: this.props.authenticatedUsername
         }
         if(this.props.activationCode){
             payload["activationCode"] = this.props.activationCode;
-            this.props.onSendRate(payload,'seller');
+            this.props.onSendRate(payload,'seller',this.props.token);
         }else{
-            this.props.onSendRate(payload,'buyer');
+            this.props.onSendRate(payload,'buyer',this.props.token);
         }
 
         this.setState({sentBtnClicked:true});
@@ -94,12 +94,14 @@ class RateCreator extends Component{
 const mapStateToProps =  state => {
     return {
         loading:state.user.loading,
-        error:state.user.error
+        error:state.user.error,
+        authenticatedUsername:state.auth.username,
+        token:state.auth.token
     };
 };
 const mapDispatchProps = dispatch=>{
     return{
-        onSendRate: (payload,rateStatus)=>dispatch(actions.createRate(payload,rateStatus))
+        onSendRate: (payload,rateStatus,token)=>dispatch(actions.createRate(payload,rateStatus,token))
     };
 };
 export default connect(mapStateToProps,mapDispatchProps)(RateCreator);

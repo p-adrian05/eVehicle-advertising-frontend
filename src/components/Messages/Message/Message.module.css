@@ -45,6 +45,7 @@
     display: flex;
     justify-content: space-between;
     width:6rem;
+    padding-right: .5rem;
 }
 .State{
     margin:.5rem  0rem;
@@ -52,6 +53,7 @@
  .Username{
     color:darkgreen;
     font-weight: bolder;
+     padding-right: .5rem;
 }
 .Username:hover{
     color:lightgreen;

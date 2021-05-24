@@ -22,7 +22,7 @@ const adLabel =(props)=>{
 
 
             <div className={mainClasses.join(" ")}>
-                <img className={classes.MainImage} src={props.mainImageSrc === null ? defaultAdImage : "http://localhost:8080/api/"+props.mainImageSrc} alt={props.title}/>
+                <img className={classes.MainImage} src={props.mainImageSrc === null ? defaultAdImage : "http://localhost:8080/api/img"+props.mainImageSrc} alt={props.title}/>
                 <div>
                     <div className={classes.mainInfo}>
                         <NavLink to={"/advertisement/"+props.id} target={props.newWindow!==undefined ? '_blank' : '_self'} >

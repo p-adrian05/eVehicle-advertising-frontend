@@ -17,7 +17,7 @@ class MessageWrapper extends Component{
     }
 
     readMessage=(unread)=>{
-        if(unread===true && this.props.receiverUsername==="user1"){
+        if(unread===true && this.props.receiverUsername===this.props.authenticatedUsername){
             let payload = {
                 content:this.props.content,
                 id:this.props.id,
@@ -42,7 +42,7 @@ class MessageWrapper extends Component{
             receiverUsername: [
                 this.props.match.params.partnerName
             ],
-            senderUserName: "user1"
+            senderUserName: this.props.authenticatedUsername
         };
         this.props.onSendMessage(payload,this.props.token);
     }
@@ -65,7 +65,7 @@ class MessageWrapper extends Component{
                 <Message id={0}
                          content={""}
                          unread={false}
-                         senderUserName={"user1"}
+                         senderUserName={this.props.authenticatedUsername}
                          receiverUsername={this.props.match.params.partnerName}
                          answerMessage
                          sentTime={""}>
@@ -106,7 +106,8 @@ const mapStateToProps =  state => {
     return {
         loading:state.message.sendMessageLoading,
         error:state.message.sendMessageError,
-        token:state.auth.token
+        token:state.auth.token,
+        authenticatedUsername:state.auth.username
     };
 };
 const mapDispatchProps = dispatch=>{

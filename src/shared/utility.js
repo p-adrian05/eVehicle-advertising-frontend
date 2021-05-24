@@ -103,7 +103,9 @@ export const isEqual=(a1,a2) =>{
     return JSON.stringify(a1)===JSON.stringify(a2);
 }
 export const formatDate=(date)=>{
-    if(date.toString().match(/(^([0-9]{4})(-[0-9]{2}){2}T(([0-9]{2}:){2})[0-9]{2})/)){
+    if(date === null){
+        return date;
+    }else if(date.toString().match(/(^([0-9]{4})(-[0-9]{2}){2}T(([0-9]{2}:){2})[0-9]{2})/)){
         let dateData = date.split("T");
         let time = dateData[1].substr(0,8);
         return dateData[0]+" "+time;

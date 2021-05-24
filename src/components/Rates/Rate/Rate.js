@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import classes from "./Rate.module.css";
 import {Link, NavLink} from "react-router-dom";
 import ProfileImage from "../../ProfileImage/ProfileImage";
+import {formatDate} from "../../../shared/utility";
 
 class Rate extends Component{
 
@@ -19,7 +20,7 @@ class Rate extends Component{
                     <span >Rating user: <span className={classes.Username}>
                         <Link to={"/user/"+this.props.ratingUsername}><span>{this.props.ratingUsername}</span></Link></span>
                     </span>
-                    <span>{this.props.created}</span>
+                    <span>{formatDate(this.props.created)}</span>
                 </div>
                 <div className={classes.Body}>
                     <div className={classes.SideInfo}>

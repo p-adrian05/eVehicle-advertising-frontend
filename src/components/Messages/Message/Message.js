@@ -5,13 +5,14 @@ import {Link, withRouter} from "react-router-dom";
 import ProfileImage from "../../ProfileImage/ProfileImage";
 import {formatDate} from "../../../shared/utility";
 import Button from "../../UI/Button/Button"
+import {connect} from "react-redux";
 class Message extends Component{
 
 
     render() {
         let messageClasses = [];
         messageClasses.push(classes.Message);
-        if(this.props.unread=== true && this.props.senderUserName !== "user1"){
+        if(this.props.unread=== true && this.props.senderUserName !== this.props.authenticatedUsername){
             messageClasses.push(classes.Unread);
         }
 
@@ -21,7 +22,9 @@ class Message extends Component{
                     <div className={classes.Usernames}>
                         <span className={classes.Username}>
                     <Link to={"/user/"+this.props.senderUserName}><span>{this.props.senderUserName}</span></Link>
+
                 </span>
+                        <i className="fa fa-arrow-right" style={{color:"green", "margin-right":"0.5rem","margin-top":"0.2rem"}} aria-hidden="true"></i>
                         <span className={classes.Username}>
                     <Link to={"/user/"+this.props.receiverUsername}><span>{this.props.receiverUsername}</span></Link>
                 </span>
@@ -48,4 +51,9 @@ class Message extends Component{
     }
 };
 
-export default withRouter(Message);
+const mapStateToProps = state=>{
+    return{
+        authenticatedUsername:state.auth.username
+    };
+};
+export default withRouter(connect(mapStateToProps)(Message));
