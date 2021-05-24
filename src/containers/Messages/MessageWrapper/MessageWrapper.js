@@ -39,9 +39,7 @@ class MessageWrapper extends Component{
         this.setState({modalShow:true});
         let payload = {
             content: text,
-            receiverUsername: [
-                this.props.match.params.partnerName
-            ],
+            receiverUsername: this.props.match.params.partnerName,
             senderUserName: this.props.authenticatedUsername
         };
         this.props.onSendMessage(payload,this.props.token);

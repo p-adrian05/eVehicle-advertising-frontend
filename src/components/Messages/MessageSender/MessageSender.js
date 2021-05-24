@@ -21,9 +21,7 @@ class MessageSender extends Component{
 
         let payload = {
             content: text,
-            receiverUsername: [
-                this.props.match.params.username
-            ],
+            receiverUsername: this.props.match.params.username,
             senderUserName:this.props.authUsername
         };
         this.props.onSendMessage(payload,this.props.token);
