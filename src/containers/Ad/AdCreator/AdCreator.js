@@ -183,7 +183,7 @@ class AdCreator extends Component{
             motorInfoInputs:{
                 name:"Motor Info",
                 inputs:{
-                    kmDriven: {
+                    km: {
                         title: "Km Driven",
                         elementId: "kmDriven",
                         elementType: "input",
@@ -193,7 +193,7 @@ class AdCreator extends Component{
                             min: 0,
                             max: 2000000
                         },
-                        value: "",
+                        value: 0,
                         validation: {
                             min: 0,
                             max: 2000000,
