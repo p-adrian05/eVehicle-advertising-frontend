@@ -84,18 +84,24 @@ class Searcher extends Component{
                 valid: true
             },
             seatNumber: {
-                elementType: "select",
+                title: "Seat number",
+                elementId: "seatNumber",
+                elementType: "input",
                 elementConfig: {
-                    options: [
-                        {value: "", displayValue: "seat number"},
-                        {value: "1", displayValue: "1"},
-                        {value: "2", displayValue: "2"},
-                    ]
+                    type: "number",
+                    placeholder: "Enter seat number",
+                    min: 0,
+                    max:99
+                },
+                value: "",
+                validation: {
+                    min: 0,
+                    max:99,
+                    required: false
                 },
                 validateMessages: [],
-                value: "",
-                validation: {},
-                valid: true
+                valid: true,
+                touched: false
             },
 
             drive: {

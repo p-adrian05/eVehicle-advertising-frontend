@@ -19,11 +19,9 @@ class MessageWrapper extends Component{
     readMessage=(unread)=>{
         if(unread===true && this.props.receiverUsername===this.props.authenticatedUsername){
             let payload = {
-                content:this.props.content,
                 id:this.props.id,
-                receiverUsername:this.props.receiverUsername,
                 senderUsername:this.props.senderUserName,
-                unread:false
+                receiverUsername:this.props.receiverUsername
             }
             this.props.onReadMessage(payload,this.props.token);
         }

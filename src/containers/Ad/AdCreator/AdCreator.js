@@ -55,10 +55,10 @@ class AdCreator extends Component{
         let promises = [];
         let images = [];
         this.props.adData.imagePaths.forEach(path=>{
-            promises.push(axios.get("http://localhost:8080/api/img"+path)
+            promises.push(axios.get("http://localhost:8080/api/img/"+path)
                 .then(res=>{
                     let file = new File([res.data], path, {type: res.headers["content-type"]});
-                    images.push({data_url:"http://localhost:8080/api/img"+path,file:file});
+                    images.push({data_url:"http://localhost:8080/api/img/"+path,file:file});
                 }));
         });
         Promise.all(promises).then(() => this.setState({images:images}));

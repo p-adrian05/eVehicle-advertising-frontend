@@ -26,8 +26,8 @@ class Ad extends Component{
     createImageLinks=(imagePaths)=>{
       let imageLinks = [];
          imagePaths.forEach(path=>{
-             imageLinks.push({original:"http://localhost:8080/api/img"+path,
-                 thumbnail: "http://localhost:8080/api/img"+path});
+             imageLinks.push({original:"http://localhost:8080/api/img/"+path,
+                 thumbnail: "http://localhost:8080/api/img/"+path});
         });
          return imageLinks;
     }

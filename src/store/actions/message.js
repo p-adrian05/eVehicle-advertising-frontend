@@ -84,7 +84,7 @@ export const sendMessage = (payload,token)=>{
 export const readMessage = (payload,token)=>{
     return dispatch => {
         dispatch(readMessageStart());
-        axios.patch("/messages/",payload,{headers:auth_header(token)})
+        axios.patch("/messages/read",payload,{headers:auth_header(token)})
             .catch(err=>{
                 dispatch(readMessageFail(err.response.data.message));
             })
