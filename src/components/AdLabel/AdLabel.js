@@ -28,7 +28,7 @@ const adLabel =(props)=>{
                         <NavLink to={"/advertisement/"+props.id} target={props.newWindow!==undefined ? '_blank' : '_self'} >
                         <span className={classes.title}>{props.title}</span>
                         </NavLink>
-                        <span className={classes.price}>{new Intl.NumberFormat('hu-HU', { style: 'currency', currency: 'HUF' }).format(props.price)}</span>
+                        <span className={classes.price}>{new Intl.NumberFormat('hu-HU', { style: 'currency', currency: props.currency }).format(props.price)}</span>
                     </div>
                     {props.state === "FROZEN" ? <img className={classes.Froze} src={frozen_icon} alt={"frozen"}/> : null}
                     <div className={classes.middleInfo}>

@@ -534,6 +534,7 @@ class AdCreator extends Component{
             }
         });
          formData.append("creator",this.props.authenticatedUser);
+         formData.append("currency",this.props.currency);
         this.state.images.forEach(image=>formData.append("images",image.file));
         return  formData;
     }
@@ -838,7 +839,8 @@ const mapStateToProps =  state => {
         adDetails:state.ad.adDetails,
         adData:state.ad.adData,
         authenticatedUser:state.auth.username,
-        token:state.auth.token
+        token:state.auth.token,
+        currency:state.currency.currency
     };
 };
 const mapDispatchProps = dispatch=>{

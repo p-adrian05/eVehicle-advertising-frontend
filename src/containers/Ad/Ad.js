@@ -3,26 +3,35 @@ import AdDetails from "../../components/Ad/AdDetails/AdDetails";
 import AdHeader from "../../components/Ad/AdTitle/AdHeader";
 import classes from "./Ad.module.css"
 import Spinner from "../../components/UI/Spinner/Spinner"
-import {fetchUserRateCount, formatDate} from "../../shared/utility";
+import {
+    convertSearchParamsFromObject,
+    convertSearchParamsToObject,
+    fetchUserRateCount,
+    formatDate
+} from "../../shared/utility";
 import * as actions from "../../store/actions";
 import {connect} from "react-redux";
 import Modal from "../../components/UI/Modal/Modal";
 import RateCreator from "../../components/Rates/RateCreator/RateCreator";
 import axios from "../../axios-ads";
 import Login from "../Login/Login";
+import AdLabel from "../../components/AdLabel/AdLabel";
 class Ad extends Component{
 
     componentDidMount(){
         if(this.props.match.params.id){
-            this.props.onFetchAd(this.props.match.params.id);
+            this.props.onFetchAd(this.props.match.params.id,this.props.currency);
         }
 }
-
     state={
         userRate:null,
         rateCreatorShow:false,
     }
-
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.currency !== this.props.currency) {
+            this.componentDidMount();
+        }
+    }
     createImageLinks=(imagePaths)=>{
       let imageLinks = [];
          imagePaths.forEach(path=>{
@@ -59,6 +68,7 @@ class Ad extends Component{
         if(this.props.adData!==null){
             adHeader =  <AdHeader title={this.props.adData.title}
                                   price={this.props.adData.price}
+                                  currency={this.props.adData.currency}
                                   state={this.props.adData.state}
                                   created={formatDate(this.props.adData.created)}
                                   creator={this.props.adData.creator}
@@ -101,12 +111,13 @@ const mapStateToProps =  state => {
         adData:state.ad.adData,
         adDetailsError:state.ad.fetchAdDetailsError,
         adDataError:state.ad.fetchAdDataError,
-        token:state.auth.token
+        token:state.auth.token,
+        currency:state.currency.currency
     };
 };
 const mapDispatchProps = dispatch=>{
     return{
-        onFetchAd: (id)=>dispatch(actions.fetchAd(id)),
+        onFetchAd: (id,currency)=>dispatch(actions.fetchAd(id,currency)),
         onChangeAdState: (id,state,token)=>dispatch(actions.changeStateAd(id,state,token)),
     };
 };

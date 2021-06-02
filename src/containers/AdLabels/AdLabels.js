@@ -46,6 +46,21 @@ class AdLabels extends Component{
         });
         this.setState({orderSelector:updatedOrderSelector});
     }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.currency !== this.props.currency) {
+            let queryData = convertSearchParamsToObject(this.props.location.search);
+            let sortDataInfos = this.state.orderSelector.value.split("+");
+            queryData["sortOrder"] = sortDataInfos[0];
+            queryData["sortParam"] = sortDataInfos[1];
+            queryData["page"] = 0;
+            this.props.history.push("advertisements?"+convertSearchParamsFromObject(queryData))
+            this.props.onInitAds();
+            queryData["currency"] = this.props.currency;
+            this.props.onFetchAds(queryData);
+        }
+    }
+
     selectChangedHandler=(event)=>{
        const updatedSelector =  updateObject(this.state.orderSelector,{
             value:event.target.value
@@ -56,8 +71,10 @@ class AdLabels extends Component{
         queryData["sortOrder"] = sortDataInfos[0];
         queryData["sortParam"] = sortDataInfos[1];
         queryData["page"] = 0;
+
         this.props.history.push("advertisements?"+convertSearchParamsFromObject(queryData))
         this.props.onInitAds();
+        queryData["currency"] = this.props.currency;
         this.props.onFetchAds(queryData);
 
     }
@@ -67,6 +84,7 @@ class AdLabels extends Component{
             queryData["page"] = this.props.pageNumber +1;
 
             this.props.history.push("advertisements?"+convertSearchParamsFromObject(queryData))
+            queryData["currency"] = this.props.currency;
             this.props.onFetchAds(queryData);
         }
     }
@@ -103,6 +121,7 @@ class AdLabels extends Component{
                              id={ad.id}
                         brand={ad.brand}
                         type={ad.type}
+                             currency={ad.currency}
                         created={ad.created}
                         state={ad.state}
                         condition={ad.condition}
@@ -133,7 +152,8 @@ const mapStateToProps =  state => {
         hasNextPage:state.adSearcher.nextPage,
         pageNumber:state.adSearcher.pageNumber,
         fetchedUrl:state.adSearcher.fetchedUrl,
-        queryData: state.adSearcher.queryData
+        queryData: state.adSearcher.queryData,
+        currency:state.currency.currency
     };
 };
 const mapDispatchProps = dispatch=>{

@@ -78,7 +78,7 @@ class AdHeader extends Component{
                         </div>
                     </div>
                     <div className={classes.adInfo}>
-                        <span className={classes.price}>{formatNumber(this.props.price) +" Ft"}</span>
+                        <span className={classes.price}> {new Intl.NumberFormat('hu-HU', { style: 'currency', currency: this.props.currency }).format(this.props.price)}</span>
                         <span>{this.props.created}</span>
                     </div>
 

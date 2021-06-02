@@ -1,0 +1,13 @@
+.Selector{
+    display: flex;
+    flex-direction: row;
+}
+.Selector select{
+   width: 5rem;
+}
+.Title{
+    color: #eeeeee;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+

@@ -8,6 +8,7 @@ import adReducer from "./store/reducers/advertisement";
 import messageReducer from "./store/reducers/message";
 import userReducer from "./store/reducers/user";
 import authReducer from "./store/reducers/auth";
+import currencyReducer from "./store/reducers/currency";
 import {createStore,applyMiddleware,compose,combineReducers} from "redux";
 import thunk from "redux-thunk";
 import {BrowserRouter} from "react-router-dom";
@@ -17,7 +18,8 @@ const rootReducer =combineReducers({
     ad:adReducer,
     message:messageReducer,
     user:userReducer,
-    auth:authReducer
+    auth:authReducer,
+    currency:currencyReducer
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

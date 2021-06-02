@@ -15,6 +15,7 @@ class Searcher extends Component{
     componentDidMount() {
         this.props.onInitAds();
         let queryData =  convertSearchParamsToObject(this.props.location.search);
+        queryData["currency"] = this.props.currency;
         this.props.onFetchAds(queryData);
         let category = queryData["category"] !== undefined ? queryData["category"] : "Car";
         let brand = queryData["brand"] !== undefined ? queryData["brand"] : null;
@@ -529,7 +530,8 @@ class Searcher extends Component{
 const mapStateToProps =  state => {
     return {
         loading:state.adSearcher.loading,
-        brandOptions:state.adSearcher.brandOptions
+        brandOptions:state.adSearcher.brandOptions,
+        currency:state.currency.currency
     };
 };
 const mapDispatchProps = dispatch=>{

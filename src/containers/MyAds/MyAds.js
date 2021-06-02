@@ -4,7 +4,12 @@ import * as actions from "../../store/actions";
 import {connect} from "react-redux";
 import classes from "../MyAds/MyAds.module.css";
 import Input from "../../components/UI/Input/Input";
-import {extractPageNumber, updateObject} from "../../shared/utility";
+import {
+    convertSearchParamsFromObject,
+    convertSearchParamsToObject,
+    extractPageNumber,
+    updateObject
+} from "../../shared/utility";
 import AdLabel from "../../components/AdLabel/AdLabel";
 import Spinner from "../../components/UI/Spinner/Spinner"
 import PageNumbers from "../../components/UI/PageNumbers/PageNumbers";
@@ -19,16 +24,19 @@ class MyAds extends Component{
     createQueryData=(order,state)=>{
         const queryData = {};
         let pageParam = extractPageNumber(this.props.location.search);
-        console.log(pageParam)
         let sortDataInfos =  order.split("+");
         queryData["sortOrder"] = sortDataInfos[0];
         queryData["sortParam"] = sortDataInfos[1];
         queryData["state"] = state;
         queryData["page"] = pageParam;
+        queryData["currency"] = this.props.currency;
         return queryData;
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
         if(prevProps.location.search!==this.props.location.search){
+            this.componentDidMount();
+        }
+        if(prevProps.currency !== this.props.currency) {
             this.componentDidMount();
         }
     }
@@ -130,6 +138,7 @@ class MyAds extends Component{
                                  type={ad.type}
                                  created={ad.created}
                                  state={ad.state}
+                                 currency={ad.currency}
                                  condition={ad.condition}
                                  productData={ad.basicAdDetails}
                                  newWindow
@@ -169,7 +178,8 @@ const mapStateToProps =  state => {
         ads:state.user.ads,
         loading:state.user.loading,
         authenticatedUser:state.auth.username,
-        token:state.auth.token
+        token:state.auth.token,
+        currency:state.currency.currency
     };
 };
 const mapDispatchProps = dispatch=>{

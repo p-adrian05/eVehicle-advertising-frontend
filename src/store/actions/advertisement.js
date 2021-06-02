@@ -76,10 +76,10 @@ export const fetchAdDetailsSuccess = (data)=>{
     };
 };
 
-export const fetchAd = (id)=>{
+export const fetchAd = (id,currency)=>{
     return dispatch => {
         dispatch(fetchAdStart());
-        axios.get("/advertisement/"+id)
+        axios.get(`/advertisement/${id}?currency=${currency}`)
             .then(res=> {
                 dispatch(fetchAdSuccess(res.data));
             }).catch(err=>{
