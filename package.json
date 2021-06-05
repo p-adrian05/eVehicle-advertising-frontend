@@ -20,6 +20,8 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "routing": "0.0.2",
+    "run": "^1.4.0",
+    "start": "^5.1.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
