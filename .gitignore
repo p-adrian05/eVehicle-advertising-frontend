@@ -10,6 +10,7 @@ logs
 **/*.back.*
 idea
 eslintcache
+.eslintcache
 node_modules
 bower_components
 .idea
