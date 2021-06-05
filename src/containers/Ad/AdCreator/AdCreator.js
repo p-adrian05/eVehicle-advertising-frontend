@@ -242,12 +242,14 @@ class AdCreator extends Component{
                     accelaration: {
                         title: "Accelaration (s 0-100 km/h)",
                         elementId: "accelaration",
+
                         elementType: "input",
                         elementConfig: {
                             type: "number",
                             placeholder: "Enter accelaration",
                             min: 0,
-                            max:10000
+                            max:10000,
+                            step: "0.01"
                         },
                         value: "",
                         validation: {
