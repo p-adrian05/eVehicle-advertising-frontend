@@ -8,10 +8,11 @@
 logs
 **/*.backup.*
 **/*.back.*
-
+idea
+eslintcache
 node_modules
 bower_components
-
+.idea
 *.sublime*
 
 psd
