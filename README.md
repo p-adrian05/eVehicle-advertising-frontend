@@ -6,6 +6,10 @@
 - npm install
 - npm run start
 
+## With docker
+- docker compose build
+- docker compose up
+
 - http://localhost:3000/advertisements
 <img src="./images/home.jpg" width="900px">
 
