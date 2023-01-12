@@ -12,5 +12,9 @@
 
 - http://localhost:3000/advertisements
 <img src="./images/home.jpg" width="900px">
-
-[More images](https://github.com/p-adrian05/eVehicle-advertising-frontend/tree/master/images)
+<img src="./images/ad.png" width="900px">
+<img src="./images/ad-edit.png" width="900px">
+<img src="./images/messages.png" width="900px">
+<img src="./images/myads.png" width="900px">
+<img src="./images/profile.jpg" width="900px">
+<img src="./images/rates.png" width="900px">
